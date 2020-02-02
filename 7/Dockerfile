@@ -2,7 +2,7 @@
 
 # This image re-bundles the Docker image from the upstream provider, Elastic.
 FROM docker.elastic.co/elasticsearch/elasticsearch:7.5.2@sha256:771240a8e1c76cc6ac6aa740d2b82de94d4b8b7dbcca5ad0cf49d12b88a3b8e7
-
+RUN /usr/share/elasticsearch/bin/plugin install --batch ingest-attachment
 # The upstream image was built by:
 #   https://github.com/elastic/dockerfiles/tree/v7.5.2/elasticsearch
 
